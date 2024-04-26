@@ -14,7 +14,7 @@ tab = pd.read_excel('/Users/gggg/Downloads/фото в стиле ТеДо, ра
 # colors = [[b, g, r] for [r, g, b] in rgb_colors]
 # print(colors)
 def chek(imPath):
-
+    
     colors = [[0, 0, 0], [98, 44, 0], [137, 76, 0], [169, 104, 0], [174, 119, 60], [204, 155, 91], [174, 152, 131], [192, 172, 147], [219, 215, 212], [216, 215, 217]] # BGR
     tolerance = 50
     bounds = [(np.array([color[0] - tolerance, color[1] - tolerance, color[2] - tolerance]),
@@ -60,7 +60,6 @@ semp = 20
 s = 0
 for i in range(semp):
   
-
     h, per = chek('/Volumes/Zx20/tedohack/Фото в стиле ТеДо/'+paths_to_stiled[i])
 
     s += h
@@ -78,4 +77,4 @@ for i in range(semp):
 
     sU += h
     print(per,h)
-print(sU/semp)
+print(1-(sU/semp))
