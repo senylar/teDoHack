@@ -34,7 +34,7 @@ def chek(imPath):
         return 0, per
 
 
-#%% md
+
 
 #%%
 import os
@@ -54,30 +54,28 @@ def chek_temputer(pathIm):
 #%%
 paths_to_stiled = get_files_in_directory('/Volumes/Zx20/tedohack/Фото в стиле ТеДо')
 paths_to_UNstiled = get_files_in_directory('/Volumes/Zx20/tedohack/Фото НЕ в стиле ТеДо')
-#%%
+
 semp = 20
 
 s = 0
 for i in range(semp):
-    # if paths_to_stiled[i][0] == '.':
-    #     continue
+  
 
     h, per = chek('/Volumes/Zx20/tedohack/Фото в стиле ТеДо/'+paths_to_stiled[i])
 
     s += h
     print(per,h)
-s/semp
-#%%
+print(s/semp)
+
 
 s/semp
 
 sU = 0
 for i in range(semp):
-    # if paths_to_UNstiled[i][0] == '.':
-    #     continue
+    
 
     h, per = chek('/Volumes/Zx20/tedohack/Фото НЕ в стиле ТеДо/'+paths_to_UNstiled[i])
 
     sU += h
     print(per,h)
-sU/semp
+print(sU/semp)
